@@ -111,13 +111,14 @@ for(let i of data){
     let pos = (position ? 'margin-left: 20%' : 'margim-right: 20%')
     position = !position
     let fav = (i.favourite ? 'самый прям любимый)' : 'не самый любимый(')
+    let favCol = (i.favourite ? 'crimson' : 'dimgray')
     sect.innerHTML += `
     <div style="background-color: ${i.color}; ${pos}; box-shadow: 0 0 10px 0 ${i.color};" class="block">
         <div><p>-${i.name}-</p></div>
         <div class="paint" style="background-image: url(${i.img_link});"></div>
         <div><p>Age: ${i.age}</p></div>
         <div><p>Rate: ${i.rate}</p></div>
-        <div><p>${fav}</p></div>
+        <div><p style="color: ${favCol};">${fav}</p></div>
         <div><p>Описание: ${i.description}</p></div>
         <div><p>Его ID: ${i.id}</p></div>
     </div>
